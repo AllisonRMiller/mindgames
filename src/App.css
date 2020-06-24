@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+#symbolTable{
+  display:block;
+  height: 30vh;
+  overflow-y: auto;
+}
+
+#cardMain{
+  display:block;
+  height:40vh;
+}
