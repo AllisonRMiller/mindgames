@@ -13,13 +13,6 @@ import {
   Table,
   Button
 } from 'reactstrap';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory
-} from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -32,8 +25,8 @@ function App() {
   var header = ["I can read your mind.",
     "Pick a number from 01 - 99",
     "Add both digits together to get a new number",
-    "Subtract your new number from the original number",
-    "",
+    "Subtract the new number from the original number",
+    " ",
     " "];
   var p = [[""],
     ["when you have your number click next"],
@@ -108,17 +101,17 @@ function App() {
 <Container>
   <Row>
     <Col className="col-md-5">
-      <Card className="text-center mt-5 mx-auto">
-        <CardTitle><h4>{header[page]}</h4>
+      <Card className="text-center mt-5 mx-auto h-100">
+        <CardTitle className="mt-1"><h4>{header[page]}</h4>
         </CardTitle>
         <CardBody id="mainCard">
         <Container id="symbolTable">
             {page == 4 && count()}
         </Container>
-          {/* <CardText> */}
+          <CardText className="mt-1">
             <div>{p[page].map(function(x){return(<p>{x}</p>)})}</div>
             <div>{page==5 && showSymbol()}</div>
-          {/* </CardText> */}
+          </CardText>
         </CardBody>
         <CardFooter>
           {page !== 0 && (<Button className="float-left" onClick={() => setPage(0)}>R</Button>)}
