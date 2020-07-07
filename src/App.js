@@ -13,13 +13,8 @@ import {
   Table,
   Button
 } from 'reactstrap';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory
-} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight, faRedo } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function App() {
@@ -32,8 +27,8 @@ function App() {
   var header = ["I can read your mind.",
     "Pick a number from 01 - 99",
     "Add both digits together to get a new number",
-    "Subtract your new number from the original number",
-    "",
+    "Subtract the new number from the original number",
+    " ",
     " "];
   var p = [[""],
     ["when you have your number click next"],
@@ -106,23 +101,23 @@ function App() {
 
   return (
 <Container>
-  <Row>
+  <Row className="justify-content-center">
     <Col className="col-md-5">
-      <Card className="text-center mt-5 mx-auto">
-        <CardTitle><h4>{header[page]}</h4>
+      <Card className="text-center mt-5 mx-auto h-100">
+        <CardTitle className="mt-1" id="cardTitle"><h4>{header[page]}</h4>
         </CardTitle>
         <CardBody id="mainCard">
         <Container id="symbolTable">
             {page == 4 && count()}
         </Container>
-          {/* <CardText> */}
+          <CardText className="mt-1">
             <div>{p[page].map(function(x){return(<p>{x}</p>)})}</div>
             <div>{page==5 && showSymbol()}</div>
-          {/* </CardText> */}
+          </CardText>
         </CardBody>
         <CardFooter>
-          {page !== 0 && (<Button className="float-left" onClick={() => setPage(0)}>R</Button>)}
-          {page < 5 && (<Button className="float-right" onClick={() => setPage(page + 1)}>Next</Button>)}
+          {page !== 0 && (<Button className="float-left" onClick={() => setPage(0)}><FontAwesomeIcon icon={faRedo}/></Button>)}
+          {page < 5 && (<Button className="float-right" onClick={() => setPage(page + 1)}><FontAwesomeIcon icon={faArrowCircleRight}/></Button>)}
 
         </CardFooter>
 
