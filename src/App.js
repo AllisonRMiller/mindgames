@@ -102,7 +102,7 @@ function App() {
   <Row>
     <Col className="col-md-5">
       <Card className="text-center mt-5 mx-auto h-100">
-        <CardTitle className="mt-1"><h4>{header[page]}</h4>
+        <CardTitle className="mt-1" id="cardTitle"><h4>{header[page]}</h4>
         </CardTitle>
         <CardBody id="mainCard">
         <Container id="symbolTable">

@@ -37,6 +37,9 @@
   }
 }
 
+#cardTitle{
+  height: 2vh;
+}
 
 #symbolTable{
   display:block;
