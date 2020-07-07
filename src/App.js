@@ -13,6 +13,8 @@ import {
   Table,
   Button
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowCircleRight, faRedo } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 function App() {
@@ -114,8 +116,8 @@ function App() {
           </CardText>
         </CardBody>
         <CardFooter>
-          {page !== 0 && (<Button className="float-left" onClick={() => setPage(0)}>R</Button>)}
-          {page < 5 && (<Button className="float-right" onClick={() => setPage(page + 1)}>Next</Button>)}
+          {page !== 0 && (<Button className="float-left" onClick={() => setPage(0)}><FontAwesomeIcon icon={faRedo}/></Button>)}
+          {page < 5 && (<Button className="float-right" onClick={() => setPage(page + 1)}><FontAwesomeIcon icon={faArrowCircleRight}/></Button>)}
 
         </CardFooter>
 
