@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Row,
@@ -6,10 +6,8 @@ import {
   Card,
   CardBody,
   CardFooter,
-  CardImg,
   CardTitle,
   CardText,
-  CardSubtitle,
   Table,
   Button
 } from 'reactstrap';
@@ -83,7 +81,7 @@ function App() {
     // console.log(char0);
     // 
     return (
-      <Table>
+      <Table className="text-light">
         <thead>
           {tableHead()}
         </thead>
@@ -101,9 +99,13 @@ function App() {
 
   return (
 <Container>
+<Row className="justify-content-center">
+
+<h1 className="mt-3 text-light">Mindgames</h1>
+</Row>
   <Row className="justify-content-center">
     <Col className="col-md-5">
-      <Card className="text-center mt-5 mx-auto h-100">
+      <Card className="text-center mt-4 mx-auto h-100 text-light" id="cardBody">
         <CardTitle className="mt-1" id="cardTitle"><h4>{header[page]}</h4>
         </CardTitle>
         <CardBody id="mainCard">
