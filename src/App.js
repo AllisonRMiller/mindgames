@@ -101,7 +101,7 @@ function App() {
 
   return (
 <Container>
-  <Row>
+  <Row className="justify-content-center">
     <Col className="col-md-5">
       <Card className="text-center mt-5 mx-auto h-100">
         <CardTitle className="mt-1" id="cardTitle"><h4>{header[page]}</h4>
